@@ -1,0 +1,114 @@
+/* .row_poster{
+    width: 100%;
+    object-fit: contain;
+    max-height:100px;
+    transition: transform 450ms;
+    margin-right: 10px;
+}
+
+.row_poster{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_poster::-webkit-scrollbar {
+    display: none;
+}
+
+.row_poster::-webkit-scrollbar {
+    display: none;
+}
+
+.row_poster:hover{
+    transform: scale(1.08);
+}
+
+.row_posterLarge:hover{
+    transform: scale(1.09);
+}
+
+.row{
+    margin-left: 20px;
+    color: white;
+} */
+
+
+
+
+/* .row_posters {
+    display: flex; 
+    overflow-y: hidden; 
+    overflow-x: scroll; 
+    padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none; 
+}
+
+.row_poster {
+    width: 100%; 
+    object-fit: contain; 
+    max-height: 100px;
+    transition: transform 450ms;
+    margin-right: 10px;
+}
+
+.row_poster:hover {
+    transform: scale(1.08); 
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.09); 
+}
+
+.row {
+    margin-left: 20px;
+    color: white;
+} */
+
+
+
+
+
+
+
+/* Adjust .row_poster styling for individual items */
+.row_poster {
+    width: auto; /* Ensure individual items fit properly */
+    object-fit: contain;
+    max-height: 100px;
+    transition: transform 450ms;
+    margin-right: 10px;
+}
+
+/* Add container-level styling for horizontal alignment */
+.row_posters {
+    display: flex; /* Align images horizontally */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.row_poster:hover {
+    transform: scale(1.08); /* Hover effect for individual posters */
+}
+
+.row_posterLarge{
+    max-height: 250px;
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.09); /* Hover effect for large posters */
+}
+
+.row {
+    margin-left: 20px;
+    color: white;
+}
