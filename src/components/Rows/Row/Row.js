@@ -157,9 +157,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     useEffect(() => {
         (async () => {
             try {
-                console.log(fetchUrl);
                 const request = await axios.get(fetchUrl);
-                console.log(request);
                 setMovies(request.data.results);
             } catch (error) {
                 console.log("Error fetching movies:", error);
@@ -197,12 +195,14 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         <div className="row">
             <h1>{title}</h1>
             <div className="row_posters">
-                {movies?.map((movie) => (
+                {movies?.filter((movie) =>
+                    isLargeRow ? movie.poster_path : movie.backdrop_path
+                ).map((movie) => (
                     <img
                         onClick={() => handleClick(movie)}
                         key={movie.id || movie.name}
                         src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
-                        alt={movie.name}
+                        alt={movie.name || movie.title}
                         className={`row_poster ${isLargeRow && "row_posterLarge"}`}
                     />
                 ))}
