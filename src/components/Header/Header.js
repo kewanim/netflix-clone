@@ -6,22 +6,38 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
+// Each menu item scrolls to a section of the page (row ids are set in RowList)
+const scrollToId = (id) => {
+    if (id === "top") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+    }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+const MENU = [
+    { label: "Home", target: "top" },
+    { label: "TV Shows", target: "row-tv-shows" },
+    { label: "Movies", target: "row-top-rated-movies" },
+    { label: "Originals", target: "row-netflix-originals" },
+    { label: "Documentaries", target: "row-documentaries" },
+];
+
 const Header = () => {
     return (
-        // <div>Header</div>
         <div className='header_outer_container'>
             <div className='header_container'>
                 <div className='header_left'>
                     <ul>
                         <li><img src={Netflix_logo} alt="Netflix logo" className ="netflix-logo" width ="120"/></li>
-                        <ul className= 'menu_list'>  
-                            {/* <li>Netflix</li> */}
-                            <li>Home</li>
-                            <li>TVShows</li>
-                            <li>Movies</li>
-                            <li>Latest</li>
-                            <li>MyList</li>
-                            <li>Browse by Languages</li>
+                        <ul className= 'menu_list'>
+                            {MENU.map((item) => (
+                                <li key={item.label}>
+                                    <button type="button" className="menu_link" onClick={() => scrollToId(item.target)}>
+                                        {item.label}
+                                    </button>
+                                </li>
+                            ))}
                         </ul>
                     </ul>
                 </div>

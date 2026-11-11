@@ -99,3 +99,12 @@
     color: #000 !important;
     background-color: #c6c6c6 !important;
 }
+
+.banner_trailer{
+    padding: 20px 40px;
+    background: #111;
+}
+.banner_message{
+    padding: 0 1rem;
+    color: #b3b3b3;
+}

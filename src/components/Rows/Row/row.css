@@ -112,3 +112,6 @@
     margin-left: 20px;
     color: white;
 }
+.row{
+    scroll-margin-top: 12vh;
+}
