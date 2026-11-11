@@ -3,47 +3,35 @@
     color: grey;
     display: flex;
     justify-content: center;
+    padding: 60px 0 30px;
 }
 
 .footer_inner_container{
-    width: 60%;
-    /* background-color: red; */
+    width: min(900px, 90%);
 }
 
 .footer_icons{
-    /* background-color: blue; */
-    width: 12%;
     display: flex;
-    justify-content: space-between;
-    margin-left: 10px;
+    gap: 24px;
+    margin-bottom: 24px;
     color: #fff;
 }
 
 .footer_data{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
 }
 
 .footer_data ul{
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 12vh;
-    /* background-color: blue; */
-}
-
-.service_code{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: #fff 1px solid;
-    width: 10%;
-    margin: 10px 0;
-    cursor: pointer;
+    gap: 14px;
+    font-size: 0.9rem;
 }
 
 .copy-write{
-    font-size: 10px;
-    margin-bottom: 10px;
+    font-size: 12px;
+    margin-top: 28px;
 }

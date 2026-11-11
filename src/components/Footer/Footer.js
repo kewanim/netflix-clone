@@ -46,13 +46,8 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='service_code'>
-                    <p>
-                        Service Code
-                    </p>
-                </div>
                 <div className='copy-write'>
-                    &copy; 1997-2024 Netflix, Inc.
+                    Netflix clone built for learning. Not affiliated with Netflix, Inc. Movie data from TMDB.
                 </div>
             </div>
         </div>
