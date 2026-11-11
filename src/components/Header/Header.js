@@ -29,7 +29,7 @@ const Header = () => {
             <div className='header_container'>
                 <div className='header_left'>
                     <ul>
-                        <li><img src={Netflix_logo} alt="Netflix logo" className ="netflix-logo" width ="120"/></li>
+                        <li><img src={Netflix_logo} alt="Netflix logo" className="netflix-logo" /></li>
                         <ul className= 'menu_list'>
                             {MENU.map((item) => (
                                 <li key={item.label}>
